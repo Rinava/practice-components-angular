@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-blog-post-tile',
@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-post-tile.component.scss'],
 })
 export class BlogPostTileComponent implements OnInit {
-  title!: string;
-  summary!: string;
+  @Input() title!: string; // le digo a angular que puedo recibirlo desde otro componente
+  @Input()  summary!: string;
   constructor() {}
 
   ngOnInit(): void {
-    this.title = 'Título del Blog';
-    this.summary = 'Resúmen del post';
+ /*    this.title = 'Título del Blog';
+    this.summary = 'Resúmen del post'; */
   }
 }
