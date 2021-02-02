@@ -1,3 +1,7 @@
-<app-blog-post-tile title="Licuado" summary="Como hacer uno"></app-blog-post-tile>
-<app-blog-post-tile title="Libros" summary="Pendientes de leer"></app-blog-post-tile>
-<app-blog-post-tile title="Caramelos" summary="Anotado por el dentista"></app-blog-post-tile>
+<app-blog-post-tile
+  *ngFor="let post of blogPosts"
+  [post]="post"
+></app-blog-post-tile>
+
+<!-- Buena practica: pasar objetos en vez de todas las propiedades -->
+<!-- aca le paso cada post a blog-post-tile-->
